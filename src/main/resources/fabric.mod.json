@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "whitelist_watcher",
+  "version": "${version}",
+
+  "name": "Whitelist Watcher",
+  "description": "A mod for server that can monitor changes to the Minecraft server whitelist and immediately reload the whitelist when it changes.",
+  "authors": ["leaf2006"],
+  "contact": {
+    "sources": "https://github.com/leaf2006/minecraft-whitelist-watcher-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/whitelist_watcher/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": ["org.whitelist_watcher.whitelist_watcher.client.Whitelist_watcherDataGenerator"],
+    "client": ["org.whitelist_watcher.whitelist_watcher.client.Whitelist_watcherClient"],
+    "main": ["org.whitelist_watcher.whitelist_watcher.WhitelistWatcherMod"]
+  },
+
+  "mixins": [
+    "whitelist_watcher.mixins.json"
+    ,{
+      "config": "whitelist_watcher.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
