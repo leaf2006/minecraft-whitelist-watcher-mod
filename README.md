@@ -1,8 +1,8 @@
 # Minecraft Whitelist Watcher
 **A mod for server that can monitor changes to the Minecraft server whitelist and immediately reload the whitelist when it changes.Based on Fabric**
 
->[!NOTE]
-> > This repo is still under development; the current version is unstable but usable.
+> [!NOTE]
+> This repo is still under development; the current version is unstable but usable.
 
 ## What it does
 
